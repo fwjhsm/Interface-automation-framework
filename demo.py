@@ -1,6 +1,7 @@
 import requests
-import se
+import unittest
 
+import HTMLTestRunner
 
 s = requests.Session()
 
@@ -32,7 +33,7 @@ class test():
         print(res1.text)
         print(res.text)
         print(requests.sessions.get_environ_proxies,"session取值" )
-        requ
+
         return s
 
 

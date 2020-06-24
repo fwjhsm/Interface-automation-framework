@@ -13,11 +13,12 @@ class readExcel():
         # 获取用例文件路径
         xlsPath = os.path.join(path,"testFile",xls_name)
         file = open_workbook(xlsPath)
+        # print(xlsPath)
 
         sheet = file.sheet_by_name(sheet_name)
 
         nrows = sheet.nrows
-        print(nrows)
+        # print(nrows)
         for i in range(nrows):
             if sheet.row_values(i)[0] != 'case_name':
                 cls.append(sheet.row_values(i))
@@ -26,3 +27,5 @@ class readExcel():
 
 if __name__ == '__main__':
     print(readExcel().get_xls('userCase.xlsx','login'))
+    print(readExcel().get_xls('userCase.xlsx','login')[0][1])
+    print(readExcel().get_xls('userCase.xlsx','login')[0][2])

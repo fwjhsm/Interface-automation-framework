@@ -1,13 +1,13 @@
 import requests
 import unittest
 
-import HTMLTestRunner
+# import HTMLTestRunner
 
 s = requests.Session()
 
 class test():
 
-    url = " https://frontsm.quwank.com/api/pmessage/sendCode"
+    url = " http://127.0.0.1:8888/login"
     url1 = "https://frontsm.quwank.com/api/login"
     data = {
         "phone": "15617816228",
@@ -24,9 +24,9 @@ class test():
 
     def get_code(self):
 
-        res1 = requests.post(self.url,data = self.data1)
+        res = requests.post(self.url,data = self.data1)
 
-        res = s.post(url=self.url1,data=self.data,)
+        res1 = s.post(url=self.url1,data=self.data,)
 
         print(res.cookies["SESSION"])
         print(res.cookies)
@@ -65,6 +65,19 @@ class test():
 
 # get_code()
 
-t1 = test()
+def login_post():
+    url =  "http://127.0.0.1:8888/login"
+    data = {
+        "name":"xiaoming",
+        "pwd":123456
+    }
+
+    res = requests.post(url = url,data=data)
+    print(res)
+    print(res.text)
+
+# t1 = test()
 # t1.get_code()
-t1.s()
+# t1.s()
+
+login_post()

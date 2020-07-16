@@ -11,7 +11,7 @@ class readExcel():
     def get_xls(self,xls_name,sheet_name):
         cls = []
         # 获取用例文件路径
-        xlsPath = os.path.join(path,"testFile",xls_name)
+        xlsPath = os.path.join(path,"testFile\case",xls_name)
         file = open_workbook(xlsPath)
         # print(xlsPath)
 
@@ -26,6 +26,6 @@ class readExcel():
         return cls
 
 if __name__ == '__main__':
-    print(readExcel().get_xls('userCase.xlsx','login'))
-    print(readExcel().get_xls('userCase.xlsx','login')[0][1])
-    print(readExcel().get_xls('userCase.xlsx','login')[0][2])
+    print(readExcel().get_xls('userCase.xlsx','sc_login'))
+    print(readExcel().get_xls('userCase.xlsx','sc_login')[0][1])
+    print(readExcel().get_xls('userCase.xlsx','sc_login')[0][2])

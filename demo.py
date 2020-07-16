@@ -38,7 +38,7 @@ class test():
 
 
     def s(self):
-        t1.get_code()
+        self.get_code()
         url = "https://frontsm.quwank.com/api/order/placeOrder"
         data = {
             "discountAmount":0,

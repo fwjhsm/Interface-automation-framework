@@ -28,7 +28,7 @@ class RunMain():
         return result
 
 if __name__ == '__main__':
-    result = RunMain().run_main("get",'http://127.0.0.1:8888/login',{'name': 'xiaoming','pwd':'123456'})
+    result = RunMain().run_main("post",'https://api.quwank.com/login/submit',{'phone': '15617816228','password':'123456'})
 
 
     # result  = RunMain().run_main()

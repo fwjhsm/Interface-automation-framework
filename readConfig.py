@@ -13,6 +13,10 @@ class ReadConfig():
         value = config.get('HTTP',name)
         return value
 
+    def get_https(self,name):
+        value = config.get('HTTPS',name)
+        return value
+
     def get_email(self, name):
         value = config.get('EMAIL', name)
         return value
@@ -24,6 +28,7 @@ class ReadConfig():
 
 if __name__ == '__main__':
     print("HTTP中baseurl值为：",ReadConfig().get_http('baseurl'))
+    print("HTTPS中baseurl值为：",ReadConfig().get_https('baseurl'))
     print("EMAIL中开关on_off值为：",ReadConfig().get_email('on_off'))
 
 

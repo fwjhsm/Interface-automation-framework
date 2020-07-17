@@ -6,36 +6,17 @@ import unittest
 s = requests.Session()
 
 class test():
-
-    url = " http://127.0.0.1:8888/login"
-    url1 = "https://frontsm.quwank.com/api/login"
+    url = "https://frontsm.quwank.com/api/login"
     data = {
         "phone": "15617816228",
         "password": 123456,
         "type": 2
-
     }
-    data1 = {
-        "phone": "15617816228",
-        # "password": 123456,
-        "type": 1
-
-    }
-
     def get_code(self):
-
-        res = requests.post(self.url,data = self.data1)
-
-        res1 = s.post(url=self.url1,data=self.data,)
-
-        print(res.cookies["SESSION"])
-        print(res.cookies)
-        print(res1.text)
-        print(res.text)
-        print(requests.sessions.get_environ_proxies,"session取值" )
-
+        res1 = s.post(url=self.url,data=self.data,)
+        # print(res1.text)
+        # print(requests.sessions.get_environ_proxies,"session取值" )
         return s
-
 
     def s(self):
         self.get_code()
@@ -50,10 +31,6 @@ class test():
             "phone":15617816228,
             "storeId":117,
             "type":5
-
-
-
-
         }
         res = s.post(url,data)
         print(res.text)
@@ -63,21 +40,8 @@ class test():
         pass
 
 
-# get_code()
 
-def login_post():
-    url =  "http://127.0.0.1:8888/login"
-    data = {
-        "name":"xiaoming",
-        "pwd":123456
-    }
-
-    res = requests.post(url = url,data=data)
-    print(res)
-    print(res.text)
-
-# t1 = test()
+t1 = test()
 # t1.get_code()
-# t1.s()
+t1.s()
 
-login_post()

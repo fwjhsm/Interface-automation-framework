@@ -29,3 +29,5 @@ if __name__ == '__main__':
     print(readExcel().get_xls('userCase.xlsx','sc_login'))
     print(readExcel().get_xls('userCase.xlsx','sc_login')[0][1])
     print(readExcel().get_xls('userCase.xlsx','sc_login')[0][2])
+
+    print(readExcel().get_xls('userCase.xlsx','sc_pay')[0][2])

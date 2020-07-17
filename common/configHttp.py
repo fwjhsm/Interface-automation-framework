@@ -2,6 +2,8 @@ import requests
 import json
 from geturlParams import geturlParams
 
+s = requests.Session()
+
 class RunMain():
 
     def send_post(self,url,data):

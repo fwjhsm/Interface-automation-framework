@@ -1,32 +1,108 @@
+#user/test02case
+import json
 import unittest
-
+from common.configHttp import RunMain
 import paramunittest
-
-from readExcel import readExcel
-from getpathInfo import get_path
+import geturlParams
+import urllib.parse
+from common.sessionDB import Session
+# import pythoncom
 import readExcel
+# pythoncom.CoInitialize()
 
-login_xls = readExcel.readExcel().get_xls("userCase.xlsx","login")
+url = geturlParams.geturlParams().get_Url_https_pay()# 调用我们的geturlParams获取我们拼接的URL
 
-print(login_xls)
-# @paramunittest.parametrized(*login_xls)
-class testLogin(unittest.TestCase):
-
-    def setUp(self,*login_xls):
-
-        self.data = login_xls[0][1]
-        self.path = get_path()
+login_xls = readExcel.readExcel().get_xls('userCase.xlsx', 'sc_pay')
 
 
+@paramunittest.parametrized(*login_xls)
+class testUserLogin(unittest.TestCase):
+
+    def setParameters(self, case_name, path, query, method,remark,auc):
+        """
+        set params
+        :param case_name:
+        :param path
+        :param query
+        :param method
+        :return:
+        """
+        self.case_name = str(case_name)
+        self.path = str(path)
+        self.query = str(query)
+        self.method = str(method)
+        self.remark = str(remark)
+        self.auc = str(auc)
+
+    # def description(self):
+    #     """
+    #     test report description
+    #     :return:
+    #     """
+    #     self.case_name
+
+    def setUp(self):
+        """
+
+        :return:
+        """
+        print(self.case_name+"测试开始前准备")
 
     def test01case(self):
-
-        return self.data
-
+        self.checkResult()
 
     def tearDown(self):
-        pass
+        print("测试结束，输出log完结\n\n")
+
+    def checkResult(self):# 断言
+        """
+        check test result
+        :return:
+        """
+        url1 = "https://frontsm.quwank.com/api/order/placeOrder?"
+        new_url = url1 + self.query
+        data1 = dict(urllib.parse.parse_qsl(urllib.parse.urlsplit(new_url).query))# 将一个完整的URL中的name=&pwd=转换为{'name':'xxx','pwd':'bbb'}
+
+        print(data1,"data1---test03")
+        print(self.auc)
+        print(type(self.auc))
+        if self.auc == "1.0":
+            info = Session().run_main(self.method,url,data1)
+            print(info.text)
+            response = info.json()
+            print(response["code"])
+
+
+        # elif self.auc == "0":
+        else:
+            info = RunMain().run_main(self.method, url, data1)# 根据Excel中的method调用run_main来进行requests请求，并拿到响应
+            print(info,"info")
+            print(type(info),"info的类型")
+            response = json.loads(info)# 将响应转换为字典格式
+        if self.case_name == 'pay':# 如果case_name是login，说明合法，返回的code应该为200
+            self.assertEqual(response['msg'], self.remark)
+            print(response['code'])
+
+            print(info)
+
+        if self.case_name == 'login':# 如果case_name是login，说明合法，返回的code应该为200
+            self.assertEqual(response['msg'], self.remark)
+            print(response['msg'])
+
+        if self.case_name == 'login_error':# 同上
+            self.assertEqual(response['msg'], self.remark)
+            print(response['code'])
+
+        if self.case_name == 'login_error2':# 同上
+            self.assertEqual(response['msg'], self.remark)
+            print(response['code'])
+
+        if self.case_name == "login_null":
+            self.assertEqual(response['msg'],self.remark)
 
 
 
-# print(Login().test01case())
+    # return self.assertEquals(ss["code"],)
+
+
+# testUserLogin().test01case()

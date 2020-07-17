@@ -178,9 +178,9 @@
         
     <div class='page-header'>
         <h1>Test Report</h1>
-    <p class='attribute'><strong>开始时间:</strong> 2020-07-17 15:07:35</p>
-<p class='attribute'><strong>运行时长:</strong> 0:00:00.371208</p>
-<p class='attribute'><strong>状态:</strong> 通过 7 失败 2</p>
+    <p class='attribute'><strong>开始时间:</strong> 2020-07-17 16:00:50</p>
+<p class='attribute'><strong>运行时长:</strong> 0:00:00.358807</p>
+<p class='attribute'><strong>状态:</strong> 通过 8 失败 2</p>
 
     </div>
     <div style="float: left;width:50%;"><p class='description'>Test Description</p></div>
@@ -315,71 +315,28 @@
     </td>
 </tr>
 
-    <tr class='failClass'>
-        <td>paramunittest.testUserLogin_0</td>
-        <td>1</td>
-        <td>0</td>
-        <td>1</td>
-        <td>0</td>
-        <td><a href="javascript:showClassDetail('c5',1)">详情</a></td>
-    </tr>
-
-<tr id='ft5.1' class='none'>
-    <td class='failCase'><div class='testcase'>test01case</div></td>
-    <td colspan='5' align='center'>
-    <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft5.1')" >
-        失败</a>
-    <div id='div_ft5.1' class="popup_window">
-        <pre>ft5.1: pay测试开始前准备
-{'discountAmount': '0', 'goodsTotalAmount': '2100', 'payableAmount': '2100', 'totalAmount': '2100', 'check.totalAmount': '2100', 'check.noDiscountAmount': '0', 'phone': '15617816228', 'storeId': '117', 'type': '5'} data1---test03
-1.0
-&lt;class 'str'&gt;
-{"code":"0000","msg":"操作成功","data":null}
-0000
-测试结束，输出log完结
-
-
-Traceback (most recent call last):
-  File "D:\myCode\Interface-automation-framework\testCase\test02case.py", line 52, in test01case
-    self.checkResult()
-  File "D:\myCode\Interface-automation-framework\testCase\test02case.py", line 83, in checkResult
-    self.assertEqual(response['msg'], self.remark)
-AssertionError: '操作成功' != '操作成功1'
-- 操作成功
-+ 操作成功1
-?     +
-
-</pre>
-    </div>
-    <!--css div popup end-->
-    </td>
-</tr>
-
     <tr class='passClass'>
         <td>paramunittest.testUserLogin_0</td>
         <td>1</td>
         <td>1</td>
         <td>0</td>
         <td>0</td>
-        <td><a href="javascript:showClassDetail('c6',1)">详情</a></td>
+        <td><a href="javascript:showClassDetail('c5',1)">详情</a></td>
     </tr>
 
-<tr id='pt6.1' class='hiddenRow'>
+<tr id='pt5.1' class='hiddenRow'>
     <td class='none'><div class='testcase'>test01case</div></td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.1')" >
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.1')" >
         通过</a>
-    <div id='div_pt6.1' class="popup_window">
-        <pre>pt6.1: login测试开始前准备
-{'phone': '15617816228', 'password': '123456'} data1---test03
-0.0
-&lt;class 'str'&gt;
-{"code": "0000", "msg": "操作成功", "data": {"id": 428, "account": "15617816228", "name": "👨🏻👨🏻👨🏻👨🏻", "phone": "15617816228", "loginStatus": null, "loginMsg": null, "avatar": "http://rongji-mall.oss-cn-hangzhou.aliyuncs.com/image/2020/5/25/44e3299d-96fa-416d-ae46-3b4eb5149692.jpeg", "birthday": "2020-03-25 00:00:00", "profile": "测试账号\n测试账号\n\n测试账号", "openId": null, "sex": "3", "address": null, "identityStatus": "1", "parentId": 427, "parentName": null, "rankId": 3, "rankWeight": 3, "rankName": null, "isBindPhone": "1", "isSetPassword": "1", "isSetPayPassword": "1", "wsRankId": 1, "wsRankName": "一级代理", "wsWeight": 3, "tmRankId": 12, "tmWeight": 2, "status": "1"}} info
+    <div id='div_pt5.1' class="popup_window">
+        <pre>pt5.1: login测试开始前准备
+{'phone': '15617816228', 'password': '123456', 'type': '2'} data1---test03
+{"code": "0000", "msg": "操作成功", "data": {"id": 80, "account": "15617816228", "name": "Test01", "phone": "15617816228", "loginStatus": null, "loginMsg": null, "avatar": "http://rongji-mall.oss-cn-hangzhou.aliyuncs.com/image/2020/5/16/ff3be968-e373-4da4-8a25-de629b97b03d.jpg", "sex": null, "birthday": null, "status": 1, "openId": null, "loginIp": null, "isSetPayPassword": 1, "isIdentity": 0, "parentId": null, "rankId": 4, "level": 2, "path": "#80#", "provinceCode": null, "provinceName": null, "cityCode": null, "cityName": null, "countyCode": null, "countyName": null, "isBindPhone": 1, "accountId": 91}} info
 &lt;class 'str'&gt; info的类型
 0000
-{"code": "0000", "msg": "操作成功", "data": {"id": 428, "account": "15617816228", "name": "👨🏻👨🏻👨🏻👨🏻", "phone": "15617816228", "loginStatus": null, "loginMsg": null, "avatar": "http://rongji-mall.oss-cn-hangzhou.aliyuncs.com/image/2020/5/25/44e3299d-96fa-416d-ae46-3b4eb5149692.jpeg", "birthday": "2020-03-25 00:00:00", "profile": "测试账号\n测试账号\n\n测试账号", "openId": null, "sex": "3", "address": null, "identityStatus": "1", "parentId": 427, "parentName": null, "rankId": 3, "rankWeight": 3, "rankName": null, "isBindPhone": "1", "isSetPassword": "1", "isSetPayPassword": "1", "wsRankId": 1, "wsRankName": "一级代理", "wsWeight": 3, "tmRankId": 12, "tmWeight": 2, "status": "1"}}
+{"code": "0000", "msg": "操作成功", "data": {"id": 80, "account": "15617816228", "name": "Test01", "phone": "15617816228", "loginStatus": null, "loginMsg": null, "avatar": "http://rongji-mall.oss-cn-hangzhou.aliyuncs.com/image/2020/5/16/ff3be968-e373-4da4-8a25-de629b97b03d.jpg", "sex": null, "birthday": null, "status": 1, "openId": null, "loginIp": null, "isSetPayPassword": 1, "isIdentity": 0, "parentId": null, "rankId": 4, "level": 2, "path": "#80#", "provinceCode": null, "provinceName": null, "cityCode": null, "cityName": null, "countyCode": null, "countyName": null, "isBindPhone": 1, "accountId": 91}}
 操作成功
 测试结束，输出log完结
 
@@ -396,23 +353,21 @@ AssertionError: '操作成功' != '操作成功1'
         <td>1</td>
         <td>0</td>
         <td>0</td>
-        <td><a href="javascript:showClassDetail('c7',1)">详情</a></td>
+        <td><a href="javascript:showClassDetail('c6',1)">详情</a></td>
     </tr>
 
-<tr id='pt7.1' class='hiddenRow'>
+<tr id='pt6.1' class='hiddenRow'>
     <td class='none'><div class='testcase'>test01case</div></td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt7.1')" >
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.1')" >
         通过</a>
-    <div id='div_pt7.1' class="popup_window">
-        <pre>pt7.1: login_error测试开始前准备
-{'phone': '15617816228', 'password': '112221'} data1---test03
-1.0
-&lt;class 'str'&gt;
-{'code': '4011', 'msg': '用户名或密码错误', 'data': None} response
+    <div id='div_pt6.1' class="popup_window">
+        <pre>pt6.1: login_error测试开始前准备
+{'phone': '15617816228', 'password': '112221', 'type': '2'} data1---test03
+{'code': '4044', 'msg': '账号或密码错误', 'data': None} response
 &lt;class 'dict'&gt; response的类型
-4011
+4044
 测试结束，输出log完结
 
 
@@ -428,6 +383,36 @@ AssertionError: '操作成功' != '操作成功1'
         <td>1</td>
         <td>0</td>
         <td>0</td>
+        <td><a href="javascript:showClassDetail('c7',1)">详情</a></td>
+    </tr>
+
+<tr id='pt7.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test01case</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt7.1')" >
+        通过</a>
+    <div id='div_pt7.1' class="popup_window">
+        <pre>pt7.1: login_error2测试开始前准备
+{'phone': '13213086437', 'password': '123456', 'type': '2'} data1---test03
+{"code": "4020", "msg": "用户不存在", "data": null} info
+&lt;class 'str'&gt; info的类型
+4020
+测试结束，输出log完结
+
+
+</pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+    <tr class='passClass'>
+        <td>paramunittest.testUserLogin_3</td>
+        <td>1</td>
+        <td>1</td>
+        <td>0</td>
+        <td>0</td>
         <td><a href="javascript:showClassDetail('c8',1)">详情</a></td>
     </tr>
 
@@ -438,13 +423,8 @@ AssertionError: '操作成功' != '操作成功1'
     <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.1')" >
         通过</a>
     <div id='div_pt8.1' class="popup_window">
-        <pre>pt8.1: login_error2测试开始前准备
-{'phone': '13213086437', 'password': '123456'} data1---test03
-0.0
-&lt;class 'str'&gt;
-{"code": "4010", "msg": "账号不存在", "data": null} info
-&lt;class 'str'&gt; info的类型
-4010
+        <pre>pt8.1: login_null测试开始前准备
+{'phone': '15617816228', 'type': '2'} data1---test03
 测试结束，输出log完结
 
 
@@ -455,7 +435,7 @@ AssertionError: '操作成功' != '操作成功1'
 </tr>
 
     <tr class='failClass'>
-        <td>paramunittest.testUserLogin_3</td>
+        <td>paramunittest.testUserLogin_0</td>
         <td>1</td>
         <td>0</td>
         <td>1</td>
@@ -470,23 +450,61 @@ AssertionError: '操作成功' != '操作成功1'
     <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft9.1')" >
         失败</a>
     <div id='div_ft9.1' class="popup_window">
-        <pre>ft9.1: login_null测试开始前准备
-{'phone': '15617816228'} data1---test03
+        <pre>ft9.1: pay测试开始前准备
+{'discountAmount': '0', 'goodsTotalAmount': '2100', 'payableAmount': '2100', 'totalAmount': '2100', 'check.totalAmount': '2100', 'check.noDiscountAmount': '0', 'phone': '15617816228', 'storeId': '117', 'type': '5'} data1---test03
+1.0
+&lt;class 'str'&gt;
+测试结束，输出log完结
+
+
+Traceback (most recent call last):
+  File "D:\myCode\Interface-automation-framework\testCase\test03case.py", line 53, in test01case
+    self.checkResult()
+  File "D:\myCode\Interface-automation-framework\testCase\test03case.py", line 89, in checkResult
+    self.assertEqual(response['msg'], self.remark)
+AssertionError: '账号不存在' != '操作成功'
+- 账号不存在
++ 操作成功
+
+</pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+</tr>
+
+    <tr class='failClass'>
+        <td>paramunittest.testUserLogin_1</td>
+        <td>1</td>
+        <td>0</td>
+        <td>1</td>
+        <td>0</td>
+        <td><a href="javascript:showClassDetail('c10',1)">详情</a></td>
+    </tr>
+
+<tr id='ft10.1' class='none'>
+    <td class='failCase'><div class='testcase'>test01case</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft10.1')" >
+        失败</a>
+    <div id='div_ft10.1' class="popup_window">
+        <pre>ft10.1: pay_null测试开始前准备
+{'discountAmount': '0', 'goodsTotalAmount': '2100', 'payableAmount': '2100', 'totalAmount': '2100', 'check.totalAmount': '2100', 'check.noDiscountAmount': '0', 'phone': '15617816228', 'storeId': '117', 'type': '5'} data1---test03
 0.0
 &lt;class 'str'&gt;
-{"code": "0000", "msg": "操作成功", "data": null} info
+{"code": "4044", "msg": "账号不存在", "data": null} info
 &lt;class 'str'&gt; info的类型
 测试结束，输出log完结
 
 
 Traceback (most recent call last):
-  File "D:\myCode\Interface-automation-framework\testCase\test03case.py", line 52, in test01case
+  File "D:\myCode\Interface-automation-framework\testCase\test03case.py", line 53, in test01case
     self.checkResult()
-  File "D:\myCode\Interface-automation-framework\testCase\test03case.py", line 100, in checkResult
-    self.assertEqual(response['msg'],self.remark)
-AssertionError: '操作成功' != '参数不能为空'
-- 操作成功
-+ 参数不能为空
+  File "D:\myCode\Interface-automation-framework\testCase\test03case.py", line 95, in checkResult
+    self.assertEqual(response['msg'], self.remark)
+AssertionError: '账号不存在' != '未登录'
+- 账号不存在
++ 未登录
 
 </pre>
     </div>
@@ -496,8 +514,8 @@ AssertionError: '操作成功' != '参数不能为空'
 
         <tr id='total_row'>
             <td>总计</td>
-            <td>9</td>
-            <td>7</td>
+            <td>10</td>
+            <td>8</td>
             <td>2</td>
             <td>0</td>
             <td>&nbsp;</td>
@@ -532,7 +550,7 @@ AssertionError: '操作成功' != '参数不能为空'
                     radius : '60%',
                     center: ['50%', '60%'],
                     data:[
-                        {value:7, name:'通过'},
+                        {value:8, name:'通过'},
                         {value:2, name:'失败'},
                         {value:0, name:'错误'}
                     ],

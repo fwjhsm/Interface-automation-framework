@@ -30,7 +30,7 @@ class RunMain():
         return result
 
 if __name__ == '__main__':
-    result = RunMain().run_main("post",'https://api.quwank.com/login/submit',{'phone': '15617816228','password':'123456'})
+    result = RunMain().run_main("post","https://frontsm.quwank.com/api/login",{'phone': '15617816228','password':'123456',"type":2})
 
 
     # result  = RunMain().run_main()

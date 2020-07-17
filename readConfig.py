@@ -14,7 +14,11 @@ class ReadConfig():
         return value
 
     def get_https(self,name):
-        value = config.get('HTTPS',name)
+        value = config.get('HTTPS_login',name)
+        return value
+
+    def get_https_pay(self, name):
+        value = config.get('HTTPS_pay', name)
         return value
 
     def get_email(self, name):

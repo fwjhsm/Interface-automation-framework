@@ -125,11 +125,6 @@ class AllTest:  # 定义一个类AllTest
             print("邮件发送开关配置关闭，请打开开关后可正常自动发送测试报告")
 
 
-# pythoncom.CoInitialize()
-# scheduler = BlockingScheduler()
-# scheduler.add_job(AllTest().run, 'cron', day_of_week='1-5', hour=14, minute=59)
-# scheduler.start()
-
 if __name__ == '__main__':
     AllTest().run()
 

@@ -19,7 +19,7 @@ class test():
         return s
 
     def s(self):
-        self.get_code()
+        # self.get_code()
         url = "https://frontsm.quwank.com/api/order/placeOrder"
         data = {
             "discountAmount":0,
